@@ -6,15 +6,30 @@ This is an example project layout for reconfigurable computing projects.
 
 ## Remarks
 
+### The "firmware" word
+
+Try to avoid the "firmware" word.
+It is not clear what is meant by the word "firmware" in a reconfigurable computing project.
+Is it a software running on a processor synthesized into the FPGA logic?
+Is it a software running on a SoC CPU?
+Is it a HDL?
+Is it a bitstream programmed into FPGA?
+Is it all of them?
+
+It has been already suggested in the [Standard Computer Dictionary, IEEE Std 610, 1990](https://ieeexplore.ieee.org/document/182763), that the "firmware" term is confusing.
+> The confusion surrounding this term has led some to suggest that it be avoided altogether.
+
+### Files grouping
+
 Try to group files by language, target or tool criteria.
 Do **not** group files by modules.
 
 For example, lets assume there are two modules `transmitter` and `receiver`.
 Each of them has following associated files:
-- .vhd - HDL description of the module,
-- .xml - description of the module registers,
-- .py - Python module control code used during prototype stage,
-- .go - high performance module conrol code used in final implementation.
+- `.vhd` - HDL description of the module,
+- `.xml` - description of the module registers,
+- `.py` - Python module control code used during prototype stage,
+- `.go` - high performance module conrol code used in final implementation.
 
 Do not put all these files into single directory named `transmitter` or `receiver` respectively (location of such directory within the repository is irrelevant).
 This feels very tempting and gives an impression of the proper encapsulation.
