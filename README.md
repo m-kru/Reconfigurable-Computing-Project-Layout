@@ -86,6 +86,12 @@ Obey the standard ways of the programming languages and tools.
 
 ## Directories
 
+### `/constr`
+
+Project related design constraint files.
+If convenient use relevant subdirectories for constraint files grouping.
+Do **not** put constraint files that are strictly associated with any particular module (aka. scoped to ref) here.
+
 ### `/scripts`
 
 Scripts to perform various analysis, build, install, etc operations.
@@ -95,7 +101,7 @@ For example, put `.tcl` scripts into `/tcl` subdirectory.
 
 ### `/submodules`
 
-Directory for git submodules.
+Git submodules.
 Do not use any different name for directory containing git submodules.
 With `submodules` name it is clear that the directory contains submodules.
 One does not even have to `cd` into the directory to check what is inside.
