@@ -15,4 +15,71 @@ Each of them has following associated files:
 - .xml - description of the module registers,
 - .py - Python module control code used during prototype stage,
 - .go - high performance module conrol code used in final implementation.
-Do not.
+
+Do not put all these files into single directory named `transmitter` or `receiver` respectively (location of such directory within the repository is irrelevant).
+This feels very tempting and gives an impression of the proper encapsulation.
+However, this is false impression.
+Such approach has many drawbacks and leads to numerous complications.
+Just to name a few:
+- A need for hacks and workarounds for software module/packages creation.
+- No out of hand IDEs support.
+- Longer, more complex scripts for artifacts collection in CI/CD.
+
+The reason for this is quite simple.
+
+So, instead of following layout:
+```
+my_project/
+├── receiver
+│   ├── receiver.go
+│   ├── receiver.py
+│   ├── receiver.vhd
+│   └── receiver.xml
+└── transmitter
+    ├── transmitter.go
+    ├── transmitter.py
+    ├── transmitter.vhd
+    └── transmitter.xml
+```
+apply one of below layouts:
+```
+my_project/
+├── go
+│   └── pkg
+│       └── my_project
+│           ├── receiver.go
+│           └── transmitter.go
+├── hdl
+│   ├── receiver
+│   │   └── receiver.vhd
+│   └── transmitter
+│       └── transmitter.vhd
+├── python
+│   ├── receiver.py
+│   └── transmitter.py
+└── register_tool
+    ├── receiver.xml
+    └── transmitter.xml
+```
+```
+my_project/
+├── go
+│   └── pkg
+│       └── my_project
+│           └── my_project.go
+├── hdl
+│   ├── receiver
+│   │   └── receiver.vhd
+│   └── transmitter
+│       └── transmitter.vhd
+├── python
+│   └── my_project
+│       ├── __init__.py
+│       ├── receiver.py
+│       └── transmitter.py
+└── register_tool
+    └── my_project.xml
+```
+Of course there are more correct ways.
+However, the rule is simple.
+Obey the standard ways of the programming languages and tools.
