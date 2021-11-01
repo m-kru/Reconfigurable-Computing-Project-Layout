@@ -90,5 +90,12 @@ Obey the standard ways of the programming languages and tools.
 
 Scripts to perform various analysis, build, install, etc operations.
 These scripts should keep the root level Makefile small and simple.
-If project grows, and more and more scripts are added, one can group scripts them into relevant subdirectories.
+If project grows, and more and more scripts are added, one can group scripts into relevant subdirectories.
 For example, put `.tcl` scripts into `/tcl` subdirectory.
+
+### `/submodules`
+
+Directory for git submodules.
+Do not use any different name for directory containing git submodules.
+With `submodules` name it is clear that the directory contains submodules.
+One does not even have to `cd` into the directory to check what is inside.
