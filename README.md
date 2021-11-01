@@ -89,12 +89,14 @@ Obey the standard ways of the programming languages and tools.
 ### `/constr`
 
 Project related design constraint files.
+
 If convenient use relevant subdirectories for constraint files grouping.
 Do **not** put constraint files that are strictly associated with any particular module (aka. scoped to ref) here.
 
 ### `/scripts`
 
 Scripts to perform various analysis, build, install, etc operations.
+
 These scripts should keep the root level Makefile small and simple.
 If project grows, and more and more scripts are added, one can group scripts into relevant subdirectories.
 For example, put `.tcl` scripts into `/tcl` subdirectory.
@@ -102,6 +104,7 @@ For example, put `.tcl` scripts into `/tcl` subdirectory.
 ### `/submodules`
 
 Git submodules.
+
 Do not use any different name for directory containing git submodules.
 With `submodules` name it is clear that the directory contains submodules.
 One does not even have to `cd` into the directory to check what is inside.
