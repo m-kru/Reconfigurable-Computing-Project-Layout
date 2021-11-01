@@ -13,7 +13,7 @@ It is not clear what is meant by the word "firmware" in a reconfigurable computi
 Is it a software running on a processor synthesized into the FPGA logic?
 Is it a software running on a SoC CPU?
 Is it a HDL?
-Is it a bitstream programmed into FPGA?
+Is it a bitstream programmed into the FPGA?
 Is it all of them?
 
 It has been already suggested in the [Standard Computer Dictionary, IEEE Std 610, 1990](https://ieeexplore.ieee.org/document/182763), that the "firmware" term is confusing.
