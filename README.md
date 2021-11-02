@@ -198,3 +198,7 @@ All stuff related with tests that does not match to any other directories.
 Feel free to structure the `/tests` directory anyway you want.
 
 ## Software directories
+
+## Feedback
+
+If you have any questions, or you know how to organize something better, do not hesitate to submit an issue.
