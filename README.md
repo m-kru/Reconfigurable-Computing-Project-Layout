@@ -118,6 +118,7 @@ Configuration files, configuration file templates, default configurations etc.
 
 Project related design constraint files.
 
+Good example are constraint files related with pinout.
 If convenient use relevant subdirectories for constraint files grouping.
 Do **not** put constraint files that are strictly associated with any particular module (aka. scoped to ref) here.
 
