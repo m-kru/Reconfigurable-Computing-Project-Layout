@@ -30,7 +30,7 @@ This is becase `- ` (hyphen + space) occupies the same space as 2 space characte
 The recommended way is to make separate directory for each distinct core and put there all HDL files and `.core` file.
 HDL filse might be further grouped into subdirectories.
 However, such approach is not always handy or even possible.
-Sometimes project depends on an external library, that do not have `.core` files at all.
+Sometimes project depends on an external library, that does not have `.core` files at all.
 In such case make separate directory solely for `.core` files.
 
 ### Files grouping
