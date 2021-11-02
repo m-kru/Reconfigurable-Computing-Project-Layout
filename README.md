@@ -33,6 +33,29 @@ However, such approach is not always handy or even possible.
 Sometimes project depends on an external library, that does not have `.core` files at all.
 In such case make separate directory solely for `.core` files.
 
+### Is it a config or is it a script?
+
+Sometimes, especially in case of `.tcl` files, it is not clear whether some file is a configuration file or maybe a script file.
+For example, following `.tcl` file is used for setting Vivado project properties.
+```tcl
+set_property target_language VHDL [current_project]
+set_property simulator_language Mixed [current_project]
+
+set_property flow "Vivado Synthesis 2020" [get_runs synth_1]
+set_property strategy Flow_PerfOptimized_High [get_runs synth_1]
+
+set_property flow "Vivado Implementation 2020" [get_runs impl_1]
+set_property strategy Performance_Retiming [get_runs impl_1]
+```
+From formal point of view this is a Tcl script.
+However, from a logical point of view it sets the Vivado project configurations.
+As such it is a configuration file.
+Ask yourself a question "What is the main goal of this particular file?"
+If the answer is "setting some configuration", then put it into the `/configs` directory.
+If the answer is "some action other than setting some configuration", then put it into the `/scripts` directory.
+If the answer is both, then split it into 2 (or more) files and put them into relevant directories.
+If the file can't be split, then make whatever decision you feel is right.
+
 ### Files grouping
 
 Try to group files by language, target or tool criteria.
@@ -149,6 +172,8 @@ Project documentation as well as third party data sheets etc.
 Intellectual Property files.
 
 Make separate subdirectory for each core.
+Sometimes there is a need to move a legacy IP from older version of an EDA tool.
+In such case put it into `/legacy` subdirectory.
 
 ### `/scripts`
 
@@ -171,3 +196,5 @@ One does not even have to `cd` into the directory to check what is inside.
 All stuff related with tests that does not match to any other directories.
 
 Feel free to structure the `/tests` directory anyway you want.
+
+## Software directories
