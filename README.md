@@ -200,7 +200,7 @@ Feel free to structure the `/tests` directory anyway you want.
 ## Software Directories
 
 Name the software directories based on the primary language name.
-For example, `/c`, '/go', '/python'.
+For example, `/c`, `/go`, `/python`.
 Within these directories obey the patterns/rules specific for given language.
 In other words, treat them as logically separate software projects.
 
