@@ -19,6 +19,12 @@ Is it all of them?
 It has been already suggested in the [Standard Computer Dictionary, IEEE Std 610, 1990](https://ieeexplore.ieee.org/document/182763), that the "firmware" term is confusing.
 > The confusion surrounding this term has led some to suggest that it be avoided altogether.
 
+### FuseSoc `.core` files
+
+If you use [FuseSoc](https://github.com/olofk/fusesoc) in your project then:
+1. Use 2 spaces for indentation in `.core` files.
+This is enough to make them readable.
+
 ### Files grouping
 
 Try to group files by language, target or tool criteria.
