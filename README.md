@@ -197,7 +197,17 @@ All stuff related with tests that does not match to any other directories.
 
 Feel free to structure the `/tests` directory anyway you want.
 
-## Software directories
+## Software Directories
+
+## Directories You Shouldn't Have
+
+### `/build`
+
+Reserve this directory for build stuff.
+Even if your built system does not use this directory, do not store any files in it and do not add it to git.
+Some build systems or tools use this directory by default.
+If you switch build system or add one of such tools, you might get into problems.
+This can be easily avoided by simply reserving it for build output only.
 
 ## Feedback
 
