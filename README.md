@@ -56,6 +56,12 @@ If the answer is "some action other than setting some configuration", then put i
 If the answer is both, then split it into 2 (or more) files and put them into relevant directories.
 If the file can't be split, then make whatever decision you feel is right.
 
+### Symbolic links
+
+Do not be afraid of using symbolic links.
+This is very simple and powerful concept.
+Use symbolic links to share common files between software "subprojects" or to share common stuff between projects in case of monorepo.
+
 ### Files grouping
 
 Try to group files by language, target or tool criteria.
@@ -204,7 +210,7 @@ For example, `/c`, `/go`, `/python`.
 Within these directories obey the patterns/rules specific for given language.
 In other words, treat them as logically separate software projects.
 
-It might happen that these software "sub-projects" need to share some files.
+It might happen that these software "subprojects" need to share some files.
 In such case keep those common files somewhere in the projects root path.
 Access them using relevant paths or use symbolic links.
 
