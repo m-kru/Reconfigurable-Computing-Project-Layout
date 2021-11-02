@@ -199,6 +199,15 @@ Feel free to structure the `/tests` directory anyway you want.
 
 ## Software Directories
 
+Name the software directories based on the primary language name.
+For example, `/c`, '/go', '/python'.
+Within these directories obey the patterns/rules specific for given language.
+In other words, treat them as logically separate software projects.
+
+It might happen that these software "sub-projects" need to share some files.
+In such case keep those common files somewhere in the projects root path.
+Access them using relevant paths or use symbolic links.
+
 ## Directories You Shouldn't Have
 
 ### `/build`
