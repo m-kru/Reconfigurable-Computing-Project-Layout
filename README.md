@@ -24,6 +24,14 @@ It has been already suggested in the [Standard Computer Dictionary, IEEE Std 610
 If you use [FuseSoc](https://github.com/olofk/fusesoc) in your project then:
 1. Use 2 spaces for indentation in `.core` files.
 This is enough to make them readable.
+However, what is more important, this will make your file look coherent and uniform, even in case of dictionaries as list items.
+This is becase `- ` (hyphen + space) occupies the same space as 2 space characters.
+2. Put `.core` files as close to the related HDL files as possible.
+The recommended way is to make separate directory for each distinct core and put there all HDL files and `.core` file.
+HDL filse might be further grouped into subdirectories.
+However, such approach is not always handly or even possible.
+Sometimes project depends on an external library, that do not have `.core` files at all.
+In such case make separate directory solely for `.core` files.
 
 ### Files grouping
 
