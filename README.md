@@ -209,6 +209,16 @@ Some build systems or tools use this directory by default.
 If you switch build system or add one of such tools, you might get into problems.
 This can be easily avoided by simply reserving it for build output only.
 
+### `/src`
+
+This name is too confusing to be in project's root path.
+In reconfigurable computing project there are always sources for at least 2 programming languages or hardware description languages.
+As mentioned in the remarks section, files should not be grouped by modules.
+In such case `/src` does not indicate what source files are placed there.
+
+However, `/src` directory can be used in subdirectories.
+For example in directory containing C source files or HDL modules directories.
+
 ## Feedback
 
 If you have any questions, or you know how to organize something better, do not hesitate to submit an issue.
