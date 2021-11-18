@@ -25,10 +25,10 @@ If you use [FuseSoc](https://github.com/olofk/fusesoc) in your project then:
 1. Use 2 spaces for indentation in `.core` files.
 This is enough to make them readable.
 However, what is more important, this will make your file look coherent and uniform, even in case of dictionaries as list items.
-This is becase `- ` (hyphen + space) occupies the same space as 2 space characters.
+This is because `- ` (hyphen + space) occupies the same space as 2 space characters.
 2. Put `.core` files as close to the related HDL files as possible.
 The recommended way is to make separate directory for each distinct core and put there all HDL files and `.core` file.
-HDL filse might be further grouped into subdirectories.
+HDL files might be further grouped into subdirectories.
 However, such approach is not always handy or even possible.
 Sometimes project depends on an external library, that does not have `.core` files at all.
 In such case make separate directory solely for `.core` files.
@@ -72,7 +72,7 @@ Each of them has following associated files:
 - `.vhd` - HDL description of the module,
 - `.xml` - description of the module registers,
 - `.py` - Python module control code used during prototype stage,
-- `.go` - high performance module conrol code used in final implementation.
+- `.go` - high performance module control code used in final implementation.
 
 Do not put all these files into single directory named `transmitter` or `receiver` respectively (location of such directory within the repository is irrelevant).
 This feels very tempting and gives an impression of the proper encapsulation.
@@ -172,6 +172,21 @@ Do **not** put constraint files that are strictly associated with any particular
 Design and user documents.
 
 Project documentation as well as third party data sheets etc.
+
+### `/hdl`
+
+Files related with cores implemented in Hardware Description Languages.
+
+Within the directory create subdirectories for distinct cores.
+If you use FuseSoc, then place appropriate `.core` files in the root of subdirectories.
+The core subdirectory must contain not only the hardware description of the core, but also all files closely related with the core.
+For example:
+- constraint files (aka. scoped to ref constraints),
+- memory initialization files (`.mif`),
+- `.tcl` scripts,
+- FuseSoc `.core` files.
+
+Feel free to structure the core subdirectories anyway you want.
 
 ### `/ip`
 
