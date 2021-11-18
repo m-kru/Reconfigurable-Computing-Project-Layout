@@ -153,6 +153,14 @@ Do **not** put files that are generated once (or rarely) here.
 For example, if one generates pinout constraint files using tools such as [fp2p](https://github.com/m-kru/fp2p), then one should put them into the `/constr` directory.
 Whether to store this directory or certain files in the git is up to the user.
 
+### `/build`
+
+Reserve this directory for build stuff.
+Even if your built system does not use this directory, do not store any files in it and do not add it to git.
+Some build systems or tools use this directory by default.
+If you switch build system or add one of such tools, you might get into problems.
+This can be easily avoided by simply reserving it for build output only.
+
 ### `/configs`
 
 Configuration files.
@@ -230,14 +238,6 @@ In such case keep those common files somewhere in the projects root path.
 Access them using relevant paths or use symbolic links.
 
 ## Directories You Shouldn't Have
-
-### `/build`
-
-Reserve this directory for build stuff.
-Even if your built system does not use this directory, do not store any files in it and do not add it to git.
-Some build systems or tools use this directory by default.
-If you switch build system or add one of such tools, you might get into problems.
-This can be easily avoided by simply reserving it for build output only.
 
 ### `/src`
 
