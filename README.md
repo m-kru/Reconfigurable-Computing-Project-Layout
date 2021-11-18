@@ -4,7 +4,7 @@
 
 This is an example project layout for reconfigurable computing projects.
 
-## Remarks
+## General Remarks
 
 ### The "firmware" word
 
@@ -61,6 +61,17 @@ If the file can't be split, then make whatever decision you feel is right.
 Do not be afraid of using symbolic links.
 This is very simple and powerful concept.
 Use symbolic links to share common files between software "subprojects" or to share common stuff between projects in case of monorepo.
+
+### Makefile
+
+Provide Makefile with targets for any repetitive task, such as builds, tests, linters, artifacts collection or any task that had to be done at least twice.
+Try to keep the Makefile simple and clean.
+
+Do not "embed" relatively long or complex shell scripts into the Makefile.
+Use `/scripts` directory for storing such scripts and simply call them from the Makefile.
+
+Provide `help` target with at least single sentence description of each task.
+Such `help` target is very precious, especially for newcomers, as with simple `make help` one can get to know what can be done.
 
 ### Files grouping
 
