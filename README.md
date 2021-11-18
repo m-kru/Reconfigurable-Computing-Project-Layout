@@ -73,6 +73,22 @@ Use `/scripts` directory for storing such scripts and simply call them from the 
 Provide `help` target with at least single sentence description of each task.
 Such `help` target is very precious, especially for newcomers, as with simple `make help` one can get to know what can be done.
 
+### Monorepo
+
+If you work with monorepo, create directory for each project in the repository root directory.
+For common stuff create `common` directory in the repository root directory.
+
+```
+monorepo/
+├── common
+├── project1
+├── project2
+└── project3
+```
+
+Within each project respectively, as well as within the `common` directory, apply all rules described in this document.
+In other words, treat them as independent projects.
+
 ### Files grouping
 
 Try to group files by language, target or tool criteria.
