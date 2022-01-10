@@ -66,6 +66,7 @@ Use symbolic links to share common files between software "subprojects" or to sh
 
 Provide Makefile with targets for any repetitive task, such as builds, tests, linters, artifacts collection or any task that had to be done at least twice.
 Try to keep the Makefile simple and clean.
+Place this main Makefile in project root directory.
 
 Do not "embed" relatively long or complex shell scripts into the Makefile.
 Use `/scripts` directory for storing such scripts and simply call them from the Makefile.
