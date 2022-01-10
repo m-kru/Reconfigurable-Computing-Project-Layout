@@ -91,7 +91,7 @@ In other words, treat them as independent projects.
 
 ### Files grouping
 
-Try to group files by language, target or tool criteria.
+Try to group files by the language, target or tool criteria.
 Do **not** group files by modules.
 
 For example, lets assume there are two modules `transmitter` and `receiver`.
@@ -175,7 +175,7 @@ Obey the standard ways of the programming languages and tools.
 
 Automatically generated files.
 
-Files that are frequently automatically generated and are later used during build or run stage.
+Files that are **frequently** automatically generated and are later used during build or run stage.
 Do **not** put files that are generated once (or rarely) here.
 For example, if one generates pinout constraint files using tools such as [fp2p](https://github.com/m-kru/fp2p), then one should put them into the `/constr` directory.
 Whether to store this directory or certain files in the git is up to the user.
